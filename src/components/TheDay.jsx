@@ -1,15 +1,21 @@
 import Card from "../shared/Card";
 
-function TheDay(props) {
+function TheDay() {
   return (
     <div className="min-w-screen flex justify-center my-10 mx-10">
-      <Card styles="min-w-full bg-opacity-90 text-xl">
+      <Card styles="min-w-full bg-opacity-90 text-2xl">
         {{
           content: (
             <>
-              <p>13:30 - Wedding Ceremony</p>
-              <p>- Cocktails on the Cilantro Patio</p>
-              <p>- Dinner and Dancing by the Lake</p>
+              <p>
+                <b>13:30</b> - Wedding Ceremony
+              </p>
+              <p>
+                <b>00:00</b> - Cocktails on the Cilantro Patio
+              </p>
+              <p>
+                <b>00:00</b>- Dinner and Dancing by the Lake
+              </p>
             </>
           ),
         }}

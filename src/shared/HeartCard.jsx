@@ -8,7 +8,12 @@ function HeartCard({ children }) {
         <img className="mask mask-heart mx-5 w-64" src={image} alt="" />
       </figure>
       <div className="card-body">
-        {title ? <h2 className="card-title cursive"> {title}</h2> : null}
+        {title ? (
+          <h2 className="card-title text-secondary cursive text-3xl">
+            {" "}
+            {title}
+          </h2>
+        ) : null}
         {content ? <span className="text-xl">{content}</span> : null}
         {/*<div className="card-actions justify-end">*/}
         {/*    <button className="btn btn-primary">Listen</button>*/}

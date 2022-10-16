@@ -14,10 +14,10 @@ import Submitted from "./pages/Submitted";
 
 function App() {
   return (
-    <div className="bg-opacity-0 flex flex-col h-screen bg-image">
+    <div className="bg-opacity-0 flex flex-col h-screen ">
       <Navbar></Navbar>
       <Hero></Hero>
-      <main className="flex-grow">
+      <main className="flex-grow bg-image">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/rsvp" element={<Rsvp></Rsvp>}></Route>

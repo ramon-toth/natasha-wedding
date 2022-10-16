@@ -1,11 +1,15 @@
 import Card from "../shared/Card";
 
-function VenueInfo(props) {
+function VenueInfo() {
   return (
     <div className="min-w-screen flex justify-center mb-10 mx-10">
       <Card styles="min-w-full bg-opacity-90">
         {{
-          title: <span className="cursive text-3xl">Stay and Play</span>,
+          title: (
+            <span className="cursive text-3xl text-secondary">
+              Stay and Play
+            </span>
+          ),
           content: (
             <span className="text-xl">
               The beautiful Emerald Lake Lodge nestled in the breathtaking Rocky

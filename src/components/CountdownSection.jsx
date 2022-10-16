@@ -1,11 +1,11 @@
 import React from "react";
 import Countdown from "../shared/Countdown/Countdown";
 
-function CountdownSection(props) {
+function CountdownSection() {
   return (
     <section className="p-10">
-      <div className="container min-w-full flex flex-col justify-center items-center">
-        <p className="mb-5 lg:w-1/2 cursive text-3xl">
+      <div className="container min-w-full flex flex-col justify-center items-center text-center">
+        <p className="mb-5 lg:w-1/2 cursive text-4xl">
           You are cordially invited to the wedding of Natasha Aelicks and Rhys
           Ingham.
         </p>
