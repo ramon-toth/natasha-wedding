@@ -1,8 +1,6 @@
-import React from "react";
-import Card from "../shared/Card";
 import { Link } from "react-router-dom";
 
-function RsvpSection(props) {
+function RsvpSection() {
   return (
     <section>
       <div className="hero h-96 bg-base-100 bg-opacity-0">
