@@ -11,30 +11,36 @@ function VenueInfo() {
             </span>
           ),
           content: (
-            <span className="text-xl">
-              The beautiful Emerald Lake Lodge nestled in the breathtaking Rocky
-              Mountains boasts ample opportunity for hiking, biking, canoeing,
-              and sightseeing. Only 40 minutes to Lake Louise, and 65 minutes to
-              Banff, there is no shortage of adventure that awaits you in this
-              serene escape from busy life. To book your room reservations{" "}
-              <a
-                href="https://bookings.crmr.com/115058#/guestsandrooms"
-                rel="noreferrer"
-                target="_blank"
-                className="font-bold"
-              >
-                click here
-              </a>
-              , and to learn more about the adventure that awaits you,{" "}
-              <a
-                href="https://crmr.com/activities/"
-                rel="noreferrer"
-                target="_blank"
-                className="font-bold"
-              >
-                click here
-              </a>
-            </span>
+            <div className="text-xl">
+              <p>
+                The beautiful Emerald Lake Lodge nestled in the breathtaking
+                Rocky Mountains boasts ample opportunity for hiking, biking,
+                canoeing, and sightseeing. Only 40 minutes to Lake Louise, and
+                65 minutes to Banff, there is no shortage of adventure that
+                awaits you in this serene escape from busy life.
+              </p>
+              <p>
+                To book your room reservations{" "}
+                <a
+                  href="https://bookings.crmr.com/115058#/guestsandrooms"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="font-bold"
+                >
+                  click here,
+                </a>
+                <br />
+                and to learn more about the adventure that awaits you,{" "}
+                <a
+                  href="https://crmr.com/activities/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="font-bold"
+                >
+                  click here
+                </a>
+              </p>
+            </div>
           ),
         }}
       </Card>
