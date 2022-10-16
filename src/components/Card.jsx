@@ -6,11 +6,7 @@ function Card({ children }) {
     <div className="card w-96 bg-base-100 shadow-xl">
       {image ? (
         <figure className="px-10 pt-10">
-          <img
-            src="https://placeimg.com/400/225/arch"
-            alt="Shoes"
-            className="rounded-xl"
-          />
+          <img src={image} alt="" className="rounded-xl" />
         </figure>
       ) : null}
       <div className="card-body items-center text-center">
