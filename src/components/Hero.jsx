@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 function Hero(props) {
   return (
     <section>
-      <div className="hero lg:h-128 md:h-64 sm:h-32 bg-base-100">
+      <div className="hero lg:h-128 md:h-64 sm:h-32 bg-base-100 bg-opacity-90">
         <img src={logo} alt="" className="lg:h-128 md:h-64 sm:h-32" />
         {/*<div className="hero-overlay bg-opacity-60"></div>*/}
         <div className="hero-content text-center text-neutral-content">

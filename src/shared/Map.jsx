@@ -2,7 +2,7 @@ import React from "react";
 
 function Map({ location }) {
   return (
-    <div className="card md:w-10/12 bg-base-100 shadow-xl">
+    <div className="card md:w-10/12 bg-base-100 shadow-xl bg-opacity-90">
       <div className="card-body ">
         <iframe
           title="googlemap"

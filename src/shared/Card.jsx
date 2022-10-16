@@ -1,9 +1,12 @@
 import React from "react";
 
-function Card({ children, styles }) {
+function Card({ children, styles, onClick }) {
   const { image, title, content, actions } = children;
   return (
-    <div className={`card md:w-96 bg-base-100 shadow-xl ${styles}`}>
+    <div
+      className={`card md:w-96 bg-base-100 shadow-xl ${styles}`}
+      onClick={onClick}
+    >
       {image ? (
         <figure className="px-10 pt-10">
           <img src={image} alt="" className="rounded-xl" />

@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Rsvp() {
   const [formData, setFormData] = useState({ guests: [] });
+
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const target = event.target;
@@ -34,6 +37,7 @@ function Rsvp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    return navigate("/rsvp/submitted");
   };
 
   const declinedMessage = (
