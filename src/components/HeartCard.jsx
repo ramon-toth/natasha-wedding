@@ -5,7 +5,7 @@ function HeartCard({ children }) {
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl w-2/4">
       <figure>
-        <img className="mask mask-heart mx-5" src={image} alt="" />
+        <img className="mask mask-heart mx-5 w-64" src={image} alt="" />
       </figure>
       <div className="card-body">
         {title ? <h2 className="card-title"> {title}</h2> : null}

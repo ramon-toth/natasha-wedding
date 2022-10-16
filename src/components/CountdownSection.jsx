@@ -3,7 +3,7 @@ import Countdown from "./Countdown";
 
 function CountdownSection(props) {
   return (
-    <section className="pt-10">
+    <section className="p-10">
       <div className="container min-w-full flex justify-center">
         <p className="mb-5 w-1/2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque

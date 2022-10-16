@@ -13,13 +13,15 @@ import Rsvp from "./pages/Rsvp";
 
 function App() {
   return (
-    <div className="bg-opacity-0">
+    <div className="bg-opacity-0 flex flex-col h-screen">
       <Navbar></Navbar>
       <Hero></Hero>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/rsvp" element={<Rsvp></Rsvp>}></Route>
-      </Routes>
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/rsvp" element={<Rsvp></Rsvp>}></Route>
+        </Routes>
+      </main>
       <Footer></Footer>
     </div>
   );

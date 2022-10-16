@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Rsvp(props) {
+function Rsvp() {
   const [formData, setFormData] = useState({ guests: [] });
 
   const handleInputChange = (event) => {
@@ -26,7 +26,7 @@ function Rsvp(props) {
     const name = target.name;
 
     setFormData(() => {
-      formData.guests[i][name] = value;
+      formData.guests[i][name.split("-")[1]] = value;
       return formData;
     });
   };
@@ -36,14 +36,9 @@ function Rsvp(props) {
     console.log(formData);
   };
 
-  // const handleGuestData = (event) => {
-  //   const target = event.target;
-  //   const value = target.type === "checkbox" ? target.checked : target.value;
-  //   const name = target.name;
-  //   console.log(target.value);
-  //
-  //   setFormData({ ...formData, [name]: value });
-  // };
+  const declinedMessage = (
+    <p className="mt-10">We're very sorry that you're unable to join us.</p>
+  );
 
   const formFields = (
     <>
@@ -265,68 +260,78 @@ function Rsvp(props) {
     </>
   );
   return (
-    <>
-      <div className="card w-8/12 bg-base-100 shadow-xl m-10">
-        <div className="card-body">
-          <h2 className="card-title">RSVP</h2>
-          <p>Please RSVP no later than ... DATE ...</p>
-          <form>
-            {/*Name*/}
-            <div className="form-control mt-5">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                name="fullname"
-                type="text"
-                placeholder="Name"
-                onChange={handleInputChange}
-                className="input input-bordered input-secondary"
-              />
-            </div>
-
-            {/*Accept/decline*/}
-            <fieldset id="accept">
-              <div className="form-control mt-5">
-                <label className="label cursor-pointer flex justify-start gap-x-10">
+    <div className="flex justify-center">
+      <div className="card w-full bg-base-100 shadow-xl m-10">
+        <div className="flex justify-center">
+          <div className="w-8/12">
+            <div className="card-body">
+              <h2 className="card-title">
+                Please RSVP no later than April 1st, 2023.
+              </h2>
+              <form>
+                {/*Name*/}
+                <div className="form-control mt-5">
+                  <label className="label">
+                    <span className="label-text">Name</span>
+                  </label>
                   <input
-                    type="radio"
-                    className="radio radio-secondary"
-                    name="accept"
-                    value="yes"
+                    name="fullname"
+                    type="text"
+                    placeholder="Name"
                     onChange={handleInputChange}
+                    className="input input-bordered input-secondary"
                   />
-                  <span className="label-text">Accepts with pleasure</span>
-                </label>
-                <label className="label cursor-pointer flex justify-start gap-x-10">
-                  <input
-                    type="radio"
-                    name="accept"
-                    value="no"
-                    className="radio radio-secondary"
-                    onChange={handleInputChange}
-                  />
+                </div>
 
-                  <span className="label-text">Declines with regret</span>
-                </label>
-              </div>
-            </fieldset>
+                {/*Accept/decline*/}
+                <fieldset id="accept">
+                  <div className="form-control mt-5">
+                    <label className="label cursor-pointer flex justify-start gap-x-10">
+                      <input
+                        type="radio"
+                        className="radio radio-secondary"
+                        name="accept"
+                        value="yes"
+                        onChange={handleInputChange}
+                      />
+                      <span className="label-text">
+                        <b>Accepts with pleasure</b>
+                      </span>
+                    </label>
+                    <label className="label cursor-pointer flex justify-start gap-x-10">
+                      <input
+                        type="radio"
+                        name="accept"
+                        value="no"
+                        className="radio radio-secondary"
+                        onChange={handleInputChange}
+                      />
 
-            {formData.accept === "yes" ? formFields : null}
-            {formData.guest === "yes" ? guestFields : null}
+                      <span className="label-text">
+                        <b>Declines with regret</b>
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
 
-            <div className="card-actions justify-center">
-              <button
-                onClick={handleSubmit}
-                className="btn btn-secondary text-white btn-md mt-10"
-              >
-                Submit RSVP
-              </button>
+                {formData.accept === "yes" ? formFields : null}
+                {formData.accept === "no" ? declinedMessage : null}
+                {formData.guest === "yes" ? guestFields : null}
+
+                <div className="card-actions justify-center">
+                  <button
+                    onClick={handleSubmit}
+                    className="btn btn-secondary text-white btn-md mt-10"
+                  >
+                    Submit RSVP
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
