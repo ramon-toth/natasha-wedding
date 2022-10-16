@@ -4,7 +4,7 @@ import HeartCard from "./HeartCard";
 function Couple(props) {
   return (
     <section className="mt-10">
-      <div className="container flex justify-between gap-x-10 min-w-full px-10 py-10">
+      <div className="container flex flex-col md:flex-row justify-between gap-10 min-w-full px-10 py-10">
         <HeartCard>
           {{
             title: "Bride",

@@ -3,7 +3,7 @@ import React from "react";
 function HeartCard({ children }) {
   const { title, content, image } = children;
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl w-2/4">
+    <div className="card lg:card-side bg-base-100 shadow-xl md:w-2/4">
       <figure>
         <img className="mask mask-heart mx-5 w-64" src={image} alt="" />
       </figure>

@@ -30,7 +30,7 @@ function Countdown({ epoch = Date.now().toString() }) {
   if (!timeLeft.hours) return <div className="h-40"></div>;
   return (
     <div className="flex justify-center my-10">
-      <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+      <div className="grid md:grid-flow-col sm:grid-flow-row gap-5 text-center auto-cols-max">
         <div className="flex flex-col p-2 bg-primary shadow-xl rounded-box text-secondary">
           <span className="countdown font-mono text-5xl">
             <span style={{ "--value": timeLeft.days }}></span>

@@ -5,7 +5,7 @@ function CountdownSection(props) {
   return (
     <section className="p-10">
       <div className="container min-w-full flex justify-center">
-        <p className="mb-5 w-1/2">
+        <p className="mb-5 lg:w-1/2">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
           delectus deleniti et libero quis? Accusamus atque autem commodi
           doloremque eaque harum iste laborum libero numquam porro reiciendis

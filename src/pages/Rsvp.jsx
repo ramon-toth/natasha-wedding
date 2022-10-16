@@ -263,7 +263,7 @@ function Rsvp() {
     <div className="flex justify-center">
       <div className="card w-full bg-base-100 shadow-xl m-10">
         <div className="flex justify-center">
-          <div className="w-8/12">
+          <div className="md:w-8/12">
             <div className="card-body">
               <h2 className="card-title">
                 Please RSVP no later than April 1st, 2023.
