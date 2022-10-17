@@ -15,15 +15,6 @@ function RsvpSection() {
           </div>
         </div>
       </div>
-      {/*<Card styles="w-full">*/}
-      {/*  {{*/}
-      {/*    content: (*/}
-      {/*      <Link to="/rsvp" className="btn btn-lg btn-outline btn-secondary">*/}
-      {/*        Click Here to RSVP!*/}
-      {/*      </Link>*/}
-      {/*    ),*/}
-      {/*  }}*/}
-      {/*</Card>*/}
     </section>
   );
 }

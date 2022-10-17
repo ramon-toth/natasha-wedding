@@ -2,7 +2,7 @@ import Card from "../shared/Card";
 
 function VenueInfo() {
   return (
-    <div className="min-w-screen flex justify-center mb-10 mx-10">
+    <div className="min-w-screen flex justify-center m-10">
       <Card styles="min-w-full bg-opacity-90">
         {{
           title: (

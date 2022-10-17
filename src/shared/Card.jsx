@@ -1,5 +1,3 @@
-import React from "react";
-
 function Card({ children, styles, onClick }) {
   const { image, title, content, actions } = children;
   return (

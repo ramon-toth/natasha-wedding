@@ -1,4 +1,3 @@
-import React from "react";
 import Countdown from "../shared/Countdown/Countdown";
 
 function CountdownSection() {
@@ -14,14 +13,6 @@ function CountdownSection() {
           Lake Lodge for the ceremony and reception.
         </p>
       </div>
-
-      {/*<div className="container min-w-full flex justify-center">*/}
-      {/*  <h1 className="text-xl font-bold">*/}
-      {/*    Please join us on September 23rd, 2023 at 3:00PM at Emerald Lake Lodge*/}
-      {/*    for the ceremony and reception.*/}
-      {/*  </h1>*/}
-      {/*</div>*/}
-
       <Countdown epoch={process.env.REACT_APP_COUNTDOWN}></Countdown>
     </section>
   );

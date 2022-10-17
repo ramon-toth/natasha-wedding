@@ -1,4 +1,3 @@
-import React from "react";
 import CountdownSection from "../components/CountdownSection";
 import MapSection from "../components/MapSection";
 import Couple from "../components/Couple";

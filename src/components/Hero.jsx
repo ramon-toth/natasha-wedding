@@ -1,8 +1,6 @@
-import React from "react";
-// import Countdown from "./Countdown";
 import logo from "../assets/logo.png";
 
-function Hero(props) {
+function Hero() {
   return (
     <section>
       <div className="hero lg:h-128 md:h-64 sm:h-32 bg-base-100 bg-opacity-90">

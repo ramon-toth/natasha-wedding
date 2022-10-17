@@ -1,9 +1,8 @@
-import React from "react";
 import HeartCard from "../shared/HeartCard";
 import bride from "../assets/bride.jpeg";
 import groom from "../assets/groom.jpeg";
 
-function Couple(props) {
+function Couple() {
   return (
     <section>
       <div className="container flex flex-col md:flex-row justify-between gap-10 min-w-full px-10 py-10">

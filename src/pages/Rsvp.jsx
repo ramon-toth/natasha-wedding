@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +13,7 @@ function Rsvp() {
     const guestCount =
       target.type === "select-one" ? parseInt(target.value) : null;
 
-    if (guestCount && formData.guests.length < 1) {
+    if (guestCount && formData.guests.length !== guestCount) {
       const buildArray = Array.from(Array(guestCount).keys());
       formData.guests = buildArray.map(() => {
         return {};
@@ -32,6 +31,7 @@ function Rsvp() {
       formData.guests[i][name.split("-")[1]] = value;
       return formData;
     });
+    console.log(formData);
   };
 
   const handleSubmit = (e) => {
@@ -50,7 +50,7 @@ function Rsvp() {
       <fieldset id="entree">
         <div className="form-control mt-5">
           <label className="label">
-            <span className="label-text">Entree Preference</span>
+            <span className="label-text text-lg">Entree Preference</span>
           </label>
 
           <label className="label cursor-pointer flex justify-start gap-x-10">
@@ -61,7 +61,7 @@ function Rsvp() {
               className="radio radio-secondary"
               onChange={handleInputChange}
             />
-            <span className="label-text">Chicken</span>
+            <span className="label-text text-lg">Chicken</span>
           </label>
           <label className="label cursor-pointer flex justify-start gap-x-10">
             <input
@@ -71,7 +71,7 @@ function Rsvp() {
               className="radio radio-secondary"
               onChange={handleInputChange}
             />
-            <span className="label-text">Meat</span>
+            <span className="label-text text-lg">Red Meat</span>
           </label>
           <label className="label cursor-pointer flex justify-start gap-x-10">
             <input
@@ -81,7 +81,7 @@ function Rsvp() {
               className="radio radio-secondary"
               onChange={handleInputChange}
             />
-            <span className="label-text">Vegetarian</span>
+            <span className="label-text text-lg">Vegetarian</span>
           </label>
         </div>
       </fieldset>
@@ -89,7 +89,7 @@ function Rsvp() {
       {/*Email*/}
       <div className="form-control mt-5">
         <label className="label">
-          <span className="label-text">E-mail</span>
+          <span className="label-text text-lg">E-mail</span>
         </label>
         <input
           name="email"
@@ -103,7 +103,7 @@ function Rsvp() {
       {/*Dietary Restrictions*/}
       <div className="form-control mt-5">
         <label className="label">
-          <span className="label-text">Dietary Restrictions</span>
+          <span className="label-text text-lg">Dietary Restrictions</span>
         </label>
         <textarea
           className="textarea textarea-secondary"
@@ -117,7 +117,7 @@ function Rsvp() {
       {/*Song Request*/}
       <div className="form-control mt-5">
         <label className="label">
-          <span className="label-text">
+          <span className="label-text text-lg">
             Please submit a song request for the party!
           </span>
         </label>
@@ -134,7 +134,9 @@ function Rsvp() {
       <fieldset id="guest">
         <div className="form-control mt-5">
           <label className="label">
-            <span className="label-text">Are you bringing a guest?</span>
+            <span className="label-text text-lg">
+              Are you bringing a guest?
+            </span>
           </label>
           <label className="label cursor-pointer flex justify-start gap-x-10">
             <input
@@ -144,7 +146,7 @@ function Rsvp() {
               className="radio radio-secondary"
               onChange={handleInputChange}
             />
-            <span className="label-text">No</span>
+            <span className="label-text text-lg">No</span>
           </label>
           <label className="label cursor-pointer flex justify-start gap-x-10">
             <input
@@ -154,7 +156,7 @@ function Rsvp() {
               className="radio radio-secondary"
               onChange={handleInputChange}
             />
-            <span className="label-text">Yes</span>
+            <span className="label-text text-lg">Yes</span>
           </label>
         </div>
       </fieldset>
@@ -166,13 +168,15 @@ function Rsvp() {
       {/*Number of Guest*/}
       <div className="form-control mt-5">
         <label className="label">
-          <span className="label-text">How many guests do you have?</span>
+          <span className="label-text text-lg">
+            How many guests do you have?
+          </span>
         </label>
         <select
           className="select select-secondary w-full max-w-xs"
           name="guestcount"
           onChange={handleInputChange}
-          disabled={formData.guests.length > 0}
+          // disabled={formData.guests.length > 0}
         >
           <option>Please select number of guests</option>
           <option>1</option>
@@ -188,7 +192,7 @@ function Rsvp() {
           {/*Guest*/}
           <div className="form-control mt-5">
             <label className="label">
-              <span className="label-text">Name of Guest {i + 1}</span>
+              <span className="label-text text-lg">Name of Guest {i + 1}</span>
             </label>
             <input
               name={`${i}-name`}
@@ -203,7 +207,7 @@ function Rsvp() {
           <fieldset id={`${i}-entree`}>
             <div className="form-control mt-5">
               <label className="label">
-                <span className="label-text">
+                <span className="label-text text-lg">
                   Entree Preference of Guest {i + 1}
                 </span>
               </label>
@@ -212,12 +216,11 @@ function Rsvp() {
                 <input
                   type="radio"
                   name={`${i}-entree`}
-                  // name={`entree${i}`}
                   value="chicken"
                   className="radio radio-secondary"
                   onChange={(event) => handleGuestChange(event, i)}
                 />
-                <span className="label-text">Chicken</span>
+                <span className="label-text text-lg">Chicken</span>
               </label>
               <label className="label cursor-pointer flex justify-start gap-x-10">
                 <input
@@ -227,7 +230,7 @@ function Rsvp() {
                   className="radio radio-secondary"
                   onChange={(event) => handleGuestChange(event, i)}
                 />
-                <span className="label-text">Meat</span>
+                <span className="label-text text-lg">Red Meat</span>
               </label>
               <label className="label cursor-pointer flex justify-start gap-x-10">
                 <input
@@ -237,7 +240,7 @@ function Rsvp() {
                   className="radio radio-secondary"
                   onChange={(event) => handleGuestChange(event, i)}
                 />
-                <span className="label-text">Vegetarian</span>
+                <span className="label-text text-lg">Vegetarian</span>
               </label>
             </div>
           </fieldset>
@@ -245,7 +248,7 @@ function Rsvp() {
           {/*Dietary Restrictions*/}
           <div className="form-control mt-5">
             <label className="label">
-              <span className="label-text">
+              <span className="label-text text-lg">
                 Dietary Restrictions of Guest {i + 1}
               </span>
             </label>
@@ -265,18 +268,18 @@ function Rsvp() {
   );
   return (
     <div className="flex justify-center">
-      <div className="card w-full bg-base-100 shadow-xl m-10">
+      <div className="card w-full bg-base-100 shadow-xl m-10 bg-opacity-90">
         <div className="flex justify-center">
           <div className="md:w-8/12">
-            <div className="card-body">
-              <h2 className="card-title">
+            <div className="card-body ">
+              <h2 className="card-title text-2xl">
                 Please RSVP no later than April 1st, 2023.
               </h2>
               <form>
                 {/*Name*/}
                 <div className="form-control mt-5">
                   <label className="label">
-                    <span className="label-text">Name</span>
+                    <span className="label-text text-lg">Name</span>
                   </label>
                   <input
                     name="fullname"
@@ -298,7 +301,7 @@ function Rsvp() {
                         value="yes"
                         onChange={handleInputChange}
                       />
-                      <span className="label-text">
+                      <span className="label-text text-lg">
                         <b>Accepts with pleasure</b>
                       </span>
                     </label>
@@ -311,7 +314,7 @@ function Rsvp() {
                         onChange={handleInputChange}
                       />
 
-                      <span className="label-text">
+                      <span className="label-text text-lg">
                         <b>Declines with regret</b>
                       </span>
                     </label>

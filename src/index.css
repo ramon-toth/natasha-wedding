@@ -9,9 +9,6 @@
 * {
   margin: 0;
   font-family: 'Pompiere', sans-serif;
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
-  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
-  /*  sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,27 +24,24 @@ code {
 
 .bg-image{
   background-image: url("/public/img/background.png");
-
-  /* Center and scale the image nicely */
   background-position: right;
   background-repeat: no-repeat;
   background-size: 50%;
   background-attachment: fixed;
 }
 
-/*.non-cursive {*/
-/*  font-family: 'Ubuntu';*/
-/*}*/
+.ios-background{
+  background-image: url("/public/img/background.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 
 @media only screen and (max-width: 600px) {
   .bg-image{
     background-image: url("/public/img/background.png");
-    /* Full height */
-
-
-    /* Center and scale the image nicely */
     background-position: right;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;  }
 }

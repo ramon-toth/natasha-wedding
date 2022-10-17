@@ -1,5 +1,3 @@
-import React from "react";
-
 function Map({ location }) {
   return (
     <div className="card md:w-10/12 bg-base-100 shadow-xl bg-opacity-90">

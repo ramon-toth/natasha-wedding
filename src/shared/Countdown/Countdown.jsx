@@ -57,34 +57,6 @@ function Countdown({ epoch = Date.now().toString() }) {
         </div>
       </div>
     </div>
-    // <div className="flex justify-center my-10">
-    //     <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-    //         <div className="flex flex-col p-2 bg-secondary rounded-box text-neutral-content">
-    //             <span className="countdown font-mono text-5xl">
-    //               <span style={{"--value":timeLeft.days}}></span>
-    //             </span>
-    //             days
-    //         </div>
-    //         <div className="flex flex-col p-2 bg-secondary rounded-box text-neutral-content">
-    //             <span className="countdown font-mono text-5xl">
-    //               <span style={{"--value":timeLeft.hours}}></span>
-    //             </span>
-    //             hours
-    //         </div>
-    //         <div className="flex flex-col p-2 bg-secondary rounded-box text-neutral-content">
-    //             <span className="countdown font-mono text-5xl">
-    //               <span style={{"--value":timeLeft.minutes}}></span>
-    //             </span>
-    //             min
-    //         </div>
-    //         <div className="flex flex-col p-2 bg-secondary rounded-box text-neutral-content">
-    //             <span className="countdown font-mono text-5xl">
-    //               <span style={{"--value":timeLeft.seconds}}></span>
-    //             </span>
-    //             sec
-    //         </div>
-    //     </div>
-    // </div>
   );
 }
 

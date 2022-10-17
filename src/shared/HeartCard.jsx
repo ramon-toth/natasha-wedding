@@ -1,5 +1,3 @@
-import React from "react";
-
 function HeartCard({ children }) {
   const { title, content, image } = children;
   return (
@@ -15,9 +13,6 @@ function HeartCard({ children }) {
           </h2>
         ) : null}
         {content ? <span className="text-xl">{content}</span> : null}
-        {/*<div className="card-actions justify-end">*/}
-        {/*    <button className="btn btn-primary">Listen</button>*/}
-        {/*</div>*/}
       </div>
     </div>
   );

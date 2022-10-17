@@ -1,9 +1,4 @@
 import Navbar from "./shared/Navbar";
-// import Hero from "./components/Hero";
-// import Couple from "./components/Couple";
-// // import Hero from "./components/Hero";
-// import CountdownSection from "./components/CountdownSection";
-// import MapSection from "./components/MapSection";
 import Footer from "./shared/Footer";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -13,11 +8,16 @@ import Rsvp from "./pages/Rsvp";
 import Submitted from "./pages/Submitted";
 
 function App() {
+  const isIOSDevice =
+    !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
   return (
     <div className="bg-opacity-0 flex flex-col h-screen ">
       <Navbar></Navbar>
       <Hero></Hero>
-      <main className="flex-grow bg-image">
+      <main
+        className={`flex-grow ${isIOSDevice ? `ios-background` : `bg-image `}`}
+      >
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/rsvp" element={<Rsvp></Rsvp>}></Route>
