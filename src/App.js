@@ -1,32 +1,20 @@
 import Navbar from "./shared/Navbar";
 import Footer from "./shared/Footer";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Hero from "./components/Hero";
 import React from "react";
-import Rsvp from "./pages/Rsvp";
-import Submitted from "./pages/Submitted";
+import PublicModule from "./modules/public/PublicModule";
+import AdminModule from "./modules/admin/AdminModule";
+import Login from "./modules/auth/Login";
 
 function App() {
-  const isIOSDevice =
-    !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-
   return (
     <div className="bg-opacity-0 flex flex-col h-screen ">
       <Navbar></Navbar>
-      <Hero></Hero>
-      <main
-        className={`flex-grow ${isIOSDevice ? `ios-background` : `bg-image `}`}
-      >
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/rsvp" element={<Rsvp></Rsvp>}></Route>
-          <Route
-            path="/rsvp/submitted"
-            element={<Submitted></Submitted>}
-          ></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/*" element={<PublicModule />} />
+        <Route path="/admin" element={<AdminModule />} />
+        <Route path="/auth/login" element={<Login />} />
+      </Routes>
       <Footer></Footer>
     </div>
   );

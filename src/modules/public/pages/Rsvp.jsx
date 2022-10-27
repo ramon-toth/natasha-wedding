@@ -2,7 +2,17 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Rsvp() {
-  const [formData, setFormData] = useState({ guests: [] });
+  const [formData, setFormData] = useState({
+    guests: [],
+    // fullname: "",
+    // accept: "",
+    // entree: "",
+    // email: "",
+    // dietary: "",
+    // songrequest: "",
+    // guest: "",
+    // guestcount: "",
+  });
 
   const navigate = useNavigate();
 
@@ -37,7 +47,23 @@ function Rsvp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    return navigate("/rsvp/submitted");
+
+    fetch(process.env.REACT_APP_API_SERVER + "/api/rsvp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Auth-Token": process.env.REACT_APP_API_KEY,
+        "X-Auth-ID": process.env.REACT_APP_SITE_ID,
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        return navigate("/rsvp/submitted");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   const declinedMessage = (
