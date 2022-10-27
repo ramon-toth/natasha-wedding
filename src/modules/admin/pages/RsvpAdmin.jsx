@@ -21,7 +21,7 @@ function RsvpAdmin() {
   const [guestList, setGuestList] = useState([]);
 
   return (
-    <div className="w-screen flex justify-center">
+    <div className="w-screen flex justify-center h-screen">
       {guestList.length > 0 ? <RsvpTable data={guestList} /> : null}
     </div>
   );
