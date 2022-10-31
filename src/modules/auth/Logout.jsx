@@ -1,21 +1,17 @@
-import React, {useEffect} from 'react';
-import {useNavigate} from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import AppContext from "../../context/AppContext";
 
 function Logout() {
-    const navigate = useNavigate();
-    window.sessionStorage.removeItem('token')
-    // navigate('/')
-    console.log('remove item')
+  const navigate = useNavigate();
+  const { setAuth } = useContext(AppContext);
 
-    useEffect(() => {
-        console.log('remove item')
-
-        // window.sessionStorage.removeItem('token')
-        // navigate('/')
-    }, [])
-    return (
-        <></>
-    );
+  useEffect(() => {
+    window.sessionStorage.removeItem("token");
+    setAuth(null);
+    navigate("/");
+  });
+  return <></>;
 }
 
 export default Logout;

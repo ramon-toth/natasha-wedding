@@ -1,17 +1,20 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AppContext from "../context/AppContext";
 
 function Navbar() {
-  const isAdmin = window.sessionStorage.getItem('token')
+  const { auth } = useContext(AppContext);
 
-
-  const adminLinks = <>
-    <li>
-      <Link to="/admin">Admin</Link>
-    </li>
-    <li>
-      <Link to="/auth/logout">Logout</Link>
-    </li>
-  </>
+  const adminLinks = (
+    <>
+      <li>
+        <Link to="/admin">Admin</Link>
+      </li>
+      <li>
+        <Link to="/auth/logout">Logout</Link>
+      </li>
+    </>
+  );
 
   return (
     <nav>
@@ -25,7 +28,7 @@ function Navbar() {
             <li>
               <Link to="/rsvp">RSVP</Link>
             </li>
-            {isAdmin ? adminLinks : null}
+            {auth ? adminLinks : null}
           </ul>
         </div>
       </div>

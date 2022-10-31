@@ -6,19 +6,22 @@ import PublicModule from "./modules/public/PublicModule";
 import AdminModule from "./modules/admin/AdminModule";
 import Login from "./modules/auth/Login";
 import Logout from "./modules/auth/Logout";
+import { AppProvider } from "./context/AppContext";
 
 function App() {
   return (
-    <div className="bg-opacity-0 flex flex-col h-screen ">
-      <Navbar></Navbar>
-      <Routes>
-        <Route path="/*" element={<PublicModule />} />
-        <Route path="/admin" element={<AdminModule />} />
-        <Route path="/auth/login" element={<Login />} />
-        <Route path="/auth/logout" element={<Logout />} />
-      </Routes>
-      <Footer></Footer>
-    </div>
+    <AppProvider>
+      <div className="bg-opacity-0 flex flex-col h-screen ">
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/*" element={<PublicModule />} />
+          <Route path="/admin" element={<AdminModule />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/logout" element={<Logout />} />
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </AppProvider>
   );
 }
 

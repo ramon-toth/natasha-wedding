@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Card from "../../shared/Card";
 import { useNavigate } from "react-router-dom";
+import AppContext from "../../context/AppContext";
 
 function Login() {
   const [formData, setFormData] = useState({});
 
   const navigate = useNavigate();
+
+  const { setAuth } = useContext(AppContext);
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -21,7 +24,6 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
 
     fetch(process.env.REACT_APP_API_SERVER + "/api/auth/login", {
       method: "POST",
@@ -39,6 +41,7 @@ function Login() {
 
   const loginSuccessful = (token) => {
     window.sessionStorage.setItem("token", token);
+    setAuth(token);
     navigate("/admin");
   };
 
