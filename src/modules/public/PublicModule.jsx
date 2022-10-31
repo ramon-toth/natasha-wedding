@@ -10,10 +10,10 @@ function PublicModule() {
     !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
   return (
-    <>
+    <div className={`flex-grow ${isIOSDevice ? `ios-background` : `bg-image `}`}>
       <Hero></Hero>
       <main
-        className={`flex-grow ${isIOSDevice ? `ios-background` : `bg-image `}`}
+
       >
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -21,7 +21,7 @@ function PublicModule() {
           <Route path="/rsvp/submitted" element={<Submitted />}></Route>
         </Routes>
       </main>
-    </>
+    </div>
   );
 }
 

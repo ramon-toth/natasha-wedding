@@ -8,13 +8,13 @@ function TheDay() {
           content: (
             <>
               <p>
-                <b>13:30</b> - Wedding Ceremony
+                <b>15:00</b> - Wedding Ceremony
               </p>
               <p>
-                <b>00:00</b> - Cocktails on the Cilantro Patio
+                <b>16:00</b> - Cocktails on the Cilantro Patio
               </p>
               <p>
-                <b>00:00</b>- Dinner and Dancing by the Lake
+                <b>17:00</b>- Dinner and Dancing in Cilantro by the Lake
               </p>
             </>
           ),

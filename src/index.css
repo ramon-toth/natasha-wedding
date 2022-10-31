@@ -25,17 +25,18 @@ code {
 
 .bg-image{
   background-image: url("/public/img/background.png");
-  background-position: right;
+  background-position: top 300px right;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 25%;
   background-attachment: fixed;
 }
 
 .ios-background{
   background-image: url("/public/img/background.png");
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: top 650px right;
+  background-repeat: repeat-y;
+  background-size: 40%;
+
 
 }
 

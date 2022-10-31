@@ -1,6 +1,18 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Navbar() {
+  const isAdmin = window.sessionStorage.getItem('token')
+
+
+  const adminLinks = <>
+    <li>
+      <Link to="/admin">Admin</Link>
+    </li>
+    <li>
+      <Link to="/auth/logout">Logout</Link>
+    </li>
+  </>
+
   return (
     <nav>
       <div className="navbar bg-base-100">
@@ -13,6 +25,7 @@ function Navbar() {
             <li>
               <Link to="/rsvp">RSVP</Link>
             </li>
+            {isAdmin ? adminLinks : null}
           </ul>
         </div>
       </div>
