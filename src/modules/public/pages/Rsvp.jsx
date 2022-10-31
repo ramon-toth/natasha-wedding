@@ -4,14 +4,6 @@ import { useNavigate } from "react-router-dom";
 function Rsvp() {
   const [formData, setFormData] = useState({
     guests: [],
-    // fullname: "",
-    // accept: "",
-    // entree: "",
-    // email: "",
-    // dietary: "",
-    // songrequest: "",
-    // guest: "",
-    // guestcount: "",
   });
 
   const navigate = useNavigate();
