@@ -11,7 +11,21 @@ function MapSection() {
         {{
           title: "Emerald Lake Lodge",
           content: (
-            <p className="mt-10 ">1 Emerald Lake Rd, Field, BC V0A 1G0</p>
+              <>
+            <p className="mt-10 text-xl ">1 Emerald Lake Rd, Field, BC V0A 1G0</p>
+            <p>
+                <a
+                    href="https://crmr.com/resorts/emerald-lake/"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="font-bold text-xl"
+                >
+                    Click here
+                </a>
+                <span className="text-xl">&nbsp; to visit website</span>
+            </p>
+              </>
+
           ),
           image:
             "https://crmr.com/wp-content/uploads/2021/02/ELL_Interior-1.jpg",

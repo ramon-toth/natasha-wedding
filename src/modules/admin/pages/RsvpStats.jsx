@@ -35,7 +35,7 @@ function RsvpStats({ data }) {
         <tbody>
           <tr>
             <th>Total</th>
-            <td>{accepted()}</td>
+            <td>{data.length}</td>
           </tr>
           <tr className="hover">
             <th>Accepted</th>

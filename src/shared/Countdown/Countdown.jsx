@@ -4,6 +4,8 @@ import "./countdown.css";
 function Countdown({ epoch = Date.now().toString() }) {
   const [timeLeft, setTimeLeft] = useState({});
 
+  const timeHasRunOut = () => epoch - Date.parse(new Date().toString()) < 0;
+
   useEffect(() => {
     const updateTimer = () => {
       const total = epoch - Date.parse(new Date().toString());
@@ -27,7 +29,7 @@ function Countdown({ epoch = Date.now().toString() }) {
     return () => clearInterval(interval);
   }, [epoch]);
 
-  if (!timeLeft.hours) return <div className="h-40"></div>;
+  if (timeHasRunOut()) return <div className="h-40"></div>;
   return (
     <div className="flex justify-center my-10">
       <div className="grid md:grid-flow-col sm:grid-flow-row gap-5 text-center auto-cols-max">

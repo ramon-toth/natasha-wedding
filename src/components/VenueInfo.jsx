@@ -5,11 +5,11 @@ function VenueInfo() {
     <div className="min-w-screen flex justify-center m-10">
       <Card styles="min-w-full bg-opacity-90">
         {{
-          title: (
-            <span className="cursive text-3xl text-secondary">
-              Stay and Play
-            </span>
-          ),
+          // title: (
+          //   <span className="cursive text-3xl text-secondary">
+          //     Stay and Play
+          //   </span>
+          // ),
           content: (
             <div className="text-xl">
               <p>

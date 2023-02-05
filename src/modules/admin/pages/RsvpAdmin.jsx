@@ -23,16 +23,12 @@ function RsvpAdmin() {
 
   return (
     <div className="w-screen  h-screen flex justify-center">
-      {/*<div className="flex justify-center ">*/}
       <RsvpStats data={guestList} />
-      {/*</div>*/}
-      {/*<div className="flex justify-center ">*/}
       {guestList.length > 0 ? (
         <RsvpTable data={guestList} />
       ) : (
         <h2 className="text-xl">No RSVPs to show yet...</h2>
       )}
-      {/*</div>*/}
     </div>
   );
 }
