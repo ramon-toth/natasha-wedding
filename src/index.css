@@ -25,7 +25,7 @@ code {
 
 .bg-image{
   background-image: url("/public/img/background.jpg");
-  background-position: top 300px right;
+  background-position: top 100px right;
   background-repeat: no-repeat;
   background-size: 25%;
   background-attachment: fixed;
