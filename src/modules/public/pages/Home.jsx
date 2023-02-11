@@ -6,6 +6,7 @@ import Divider from "../../../shared/Divider";
 import VenueInfo from "../../../components/VenueInfo";
 import TheDay from "../../../components/TheDay";
 import Accommodations from "../../../components/Accommodations";
+import Registry from "../../../components/Registry";
 
 function Home() {
   return (
@@ -14,12 +15,14 @@ function Home() {
       <Divider text="About the Happy Couple"></Divider>
       <Couple />
       <RsvpSection></RsvpSection>
-      <Divider text="About the Day"></Divider>
+      <Divider text="Registry"></Divider>
+      <Registry />
+      <Divider text="The Big Day"></Divider>
       <TheDay />
-      <Divider text="About the Venue"></Divider>
+      <Divider text="The Venue"></Divider>
       <MapSection />
       <Divider text="Accommodations"></Divider>
-        <Accommodations/>
+      <Accommodations />
       <Divider text="Stay and Play"></Divider>
       <VenueInfo />
     </>

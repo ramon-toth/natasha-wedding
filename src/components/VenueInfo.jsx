@@ -20,17 +20,17 @@ function VenueInfo() {
                 awaits you in this serene escape from busy life.
               </p>
               <p>
-                To book your room reservations{" "}
-                <a
-                  href="https://bookings.crmr.com/115058#/guestsandrooms"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="font-bold"
-                >
-                  click here,
-                </a>
-                <br />
-                and to learn more about the adventure that awaits you,{" "}
+                {/*To book your room reservations{" "}*/}
+                {/*<a*/}
+                {/*  href="https://bookings.crmr.com/115058#/guestsandrooms"*/}
+                {/*  rel="noreferrer"*/}
+                {/*  target="_blank"*/}
+                {/*  className="font-bold"*/}
+                {/*>*/}
+                {/*  click here,*/}
+                {/*</a>*/}
+                {/*<br />*/}
+                To learn more about the adventure that awaits you,{" "}
                 <a
                   href="https://crmr.com/activities/"
                   rel="noreferrer"
