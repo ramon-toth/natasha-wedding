@@ -77,7 +77,7 @@ function Couple() {
                         they’ve been friends since preschool.
                       </p>
                       <p className="text-right">
-                        – Kim Aelicks, Mother or the Bride
+                        – Kim Aelicks, Mother of the Bride
                       </p>
                     </>
                 ),
@@ -130,7 +130,7 @@ function Couple() {
                       </p>
                       <p className="text-right">
                         {" "}
-                        - Alexis Ingham, Mother of the groom
+                        - Alexis Ingham, Mother of the Groom
                       </p>
                     </>
                 ),

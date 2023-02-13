@@ -121,11 +121,11 @@ function Rsvp() {
       {/*Dietary Restrictions*/}
       <div className="form-control mt-5">
         <label className="label">
-          <span className="label-text text-lg">Dietary Restrictions</span>
+          <span className="label-text text-lg">Dietary Restrictions/Allergies</span>
         </label>
         <textarea
           className="textarea textarea-secondary"
-          placeholder="Dietary Restrictions"
+          placeholder="Dietary Restrictions/Allergies"
           rows={4}
           name="dietary"
           onChange={handleInputChange}
