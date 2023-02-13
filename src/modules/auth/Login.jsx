@@ -93,7 +93,7 @@ function Login() {
   );
 
   return (
-    <div className="h-screen flex justify-center w-screen items-center ">
+    <div className="h-screen flex justify-center w-screen items-center bg-image">
       <Card styles="h-fit">
         {{
           content: loginForm,
