@@ -11,7 +11,8 @@ function RsvpAdmin() {
       },
     })
       .then((response) => response.json())
-      .then((res) => setGuestList(res.map((r) => r.payload)))
+      // .then((res) => setGuestList(res.map((r) => r.payload)))
+      .then((res) => setGuestList(res))
       .catch((error) => {
         console.error("Error:", error);
       });

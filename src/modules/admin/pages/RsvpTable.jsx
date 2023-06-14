@@ -3,7 +3,7 @@ import shortid from 'shortid';
 
 function RsvpTable({ data }) {
   return (
-    <div className="overflow-x-auto my-10">
+    <div className="overflow-x-auto my-10 max-w-6xl overflow-y-hidden" >
       <div className="flex justify-center">
         <h2 className="text-xl font-bold my-10">RSVPs Received:</h2>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 
 function RsvpStats({ data }) {
   if (data.length < 1) return;
+  console.log(data)
 
   const accepted = () => data.filter((d) => d.accept === "yes").length;
   const declined = () => data.filter((d) => d.accept === "no").length;
